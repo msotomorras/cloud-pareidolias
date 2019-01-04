@@ -15,7 +15,7 @@ class ImageProcessing:
     image_operations = ImageOperations()
 
     def generate_region_of_interest (self, img, imgSrc):
-        are_there_images_to_evaluate = 0
+        are_there_images_to_evaluate = False
         img = self.image_operations.resize_image(img)
         mask = self.image_operations.create_mask(img)
         contours = self.image_operations.get_contours(mask)
@@ -25,16 +25,16 @@ class ImageProcessing:
         edges = self.image_operations.get_edges(mask, 10, 200)
         self.file_operations.save_image(mask, imgSrc.replace('.', '_mask.'), self.file_manager.dir_debug)  
         self.file_operations.save_image(imgMask, imgSrc.replace('.', '_masked_img.'), self.file_manager.dir_debug)    
-
         print('img processed')
         for cnt in contours:
             rectangle = self.image_operations.get_bounding_box(cnt, img, imgSrc)
-            if self.utility.is_rectangle_valid(rectangle):
+            if rectangle is not None and self.utility.is_rectangle_valid(rectangle):
+                rectangle = self.utility.correct_coords_if_negative(rectangle)
                 croppedImg = self.image_operations.crop_image(img, rectangle)
                 self.file_operations.save_image(croppedImg,  imgSrc, self.file_manager.dir_classify)
                 img_with_bounding_box = self.image_operations.draw_rectangle_on_img (img, imgSrc, rectangle)
                 self.file_operations.save_image(img_with_bounding_box, imgSrc, self.file_manager.dir_results)
-                are_there_images_to_evaluate = 1
+                are_there_images_to_evaluate = True
         return are_there_images_to_evaluate 
 
     def generate_outlined_images (self, classImg):

@@ -5,6 +5,7 @@ import os
 class ImageOperations:
 
     def crop_image(self, img, box):
+        print('box', box)
         return img[box[1]:box[3], box[0]:box[2]]  
 
     def resize_image(self, img):

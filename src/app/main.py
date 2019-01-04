@@ -25,7 +25,7 @@ def lookup_class(classImg):
 
     
 def take_picture():
-    # cmd = "raspistill -vf -o /home/pi/tensorflow/clouds/01-InputImages/img_20.jpg"
+    # cmd = "raspistill -vf -o /home/pi/cloud-pareidolias/01-InputImages/img_20.jpg"
     # subprocess.call(cmd, shell=True)
     print('take pic')
 
@@ -33,7 +33,7 @@ def tweet_image(classImg):
     print('tweet image')
     # twitter = Twython(APP_KEY, APP_SECRET,
     #               OAUTH_TOKEN, OAUTH_TOKEN_SECRET)
-    # photo = open('/home/pi/tensorflow/clouds/04-Results/final/img_20.jpg', 'rb')
+    # photo = open('/home/pi/cloud-pareidolias/04-Results/final/img_20.jpg', 'rb')
     # response = twitter.upload_media(media=photo)
     statusStr = 'Check out this image! I think I can see ' + lookup_class(classImg)
     print('status::::', statusStr)
