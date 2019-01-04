@@ -38,16 +38,14 @@ class EvaluateImages:
             session1 = tf.Session()
             with session1.as_default():
                 classifier = load_model(file_manager.model_classification)
-                imgList = os.listdir(os.path.join(file_manager.dir_classify, 'outlines'))
-                nImgs = len(imgList)
-                print('found %s images' %nImgs)
-                for i in range (nImgs):
-                    if i>0 and utility.is_image_valid(imgList[i]):
-                        img = cv2.imread(os.path.join(file_manager.dir_classify, 'outlines', imgList[i]), 0)
-                        img = cv2.resize(img, (64,64))
-                        data = img.reshape(1,64,64,1)
-                        model_out = classifier.predict(data)
-                        return np.argmax(model_out)
+                for root, dirs, files in os.walk(file_manager.dir_classify):  
+                    for filename in files:
+                        if utility.is_image_valid(filename):
+                            img = cv2.imread(os.path.join(file_manager.dir_classify, 'outlines', filename), 0)
+                            img = cv2.resize(img, (64,64))
+                            data = img.reshape(1,64,64,1)
+                            model_out = classifier.predict(data)
+                            return np.argmax(model_out)
 
     def correct_outlines(self, classImg):
         if classImg == 0:
@@ -76,7 +74,7 @@ class EvaluateImages:
             self.correct_outlines(classImg)
             self.evaluate_pix2pix(classImg)
             file_operations.save_final_image()
-        return 1
+        return classImg
 
 x = EvaluateImages()
 print('FINISHED PROCESS!: ', x.main())

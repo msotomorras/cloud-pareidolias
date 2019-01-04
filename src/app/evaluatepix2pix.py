@@ -631,6 +631,7 @@ def evaluatePix2pix(modelType, aspectRatio):
         if checkpointModel is not None:
             print("loading model from checkpoint")
             checkpoint = tf.train.latest_checkpoint(checkpointModel)
+            print('checkpoint loaded')
             saver.restore(sess, checkpoint)
 
         max_steps = 2**32
