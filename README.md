@@ -13,8 +13,10 @@ This project focuses on finding pareidolias in clouds, following this process:
 
 #### 2.1. Find Region of Interest (ROI)
    * Generate mask
-   #### 2.2. Classify image**
-   #### 2.3. Generate drawing upon found class**
+   * Find interesting areas in the picture and extract them
+   * Generate outlines
+#### 2.2. Classify image**
+#### 2.3. Generate drawing upon found class**
 
 ### 3. Make a tweet if there was a shape found
 
