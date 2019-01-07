@@ -6,7 +6,7 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 
 This project focuses on finding pareidolias in clouds, and the process to do that is the following:
 ## Take a picture of the sky
-![sky pic](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/01-InputImages/img_8.jpg)
+![sky pic](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/01-InputImages/img_0.jpg)
 
 
 ## Process picture:
