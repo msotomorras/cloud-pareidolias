@@ -43,11 +43,16 @@ class ImageOperations:
         img2 = cv2.rectangle(img2, (box[0], box[1]), (box[2], box[3]), (255,0,0), 2)
         return img2
 
-    def get_bounding_box(self, cnt, img, imgSrc):
+      
+    def get_total_area_img(self, img):
+        return img.shape[0]*img.shape[1]
+
+    def get_bounding_box(self, cnt, img):
         margin = 20
         box = [0]
-        area_thresholds = [5000, 205000]
-        if area_thresholds[0]<cv2.contourArea(cnt)<area_thresholds[1]:
+        area = self.get_total_area_img(img)
+        area_threshold = [area*0.05, area]
+        if area_threshold[0]<cv2.contourArea(cnt)<area_threshold[1]:
             (x,y,w,h) = cv2.boundingRect(cnt)
             aspect_ratio = 0.75
             h = int(w*aspect_ratio)
