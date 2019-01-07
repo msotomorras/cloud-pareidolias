@@ -18,7 +18,7 @@ This project focuses on finding pareidolias in clouds, and the process to do tha
 2. Find areas within a defined threshold and extract that part of the image
 ...Defining the areas that we would be interested in analysing and extract them from the picture to continue the process
 ...![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/results/img_0.jpg)
-3. Generate outlines<br/>
+3. Generate outlines of the ROI<br/>
 ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
 ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
 #### Classify image
