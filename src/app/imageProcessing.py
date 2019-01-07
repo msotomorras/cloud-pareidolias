@@ -57,4 +57,3 @@ class ImageProcessing:
                         print('Outline generated:', filename)
                         self.file_operations.save_image(doubleOutput, filename, self.file_manager.dir_pix2pix)
                         self.file_operations.save_image(outlinedImg, filename, self.file_manager.dir_classify_outlines)
-    

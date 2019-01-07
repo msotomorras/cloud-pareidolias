@@ -21,16 +21,16 @@ class EvaluateImages:
     file_manager.setup_file_structure()
 
     def get_new_region_of_interest_from_image(self):
-        imgList = os.listdir(self.file_manager.dir_in)
-        nImgs = len(imgList)
-        for i in range(nImgs):
-            new_roi_from_image = False
-            if self.utility.is_image_valid(imgList[i]):
-                img = cv2.imread(os.path.join(FileManager.dir_in, imgList[i]), 1)
-                new_roi_from_image = self.image_processing.generate_region_of_interest(img, str(imgList[i]))
-                return new_roi_from_image
-            else:
-                return new_roi_from_image
+        for root, dirs, files in os.walk(self.file_manager.dir_in): 
+            for filename in files:
+                if self.utility.ignore_ds_store(filename):
+                    new_roi_from_image = False 
+                    if self.utility.is_image_valid(filename):
+                        img = cv2.imread(os.path.join(FileManager.dir_in, filename), 1)
+                        new_roi_from_image = self.image_processing.generate_region_of_interest(img, filename)
+                        return new_roi_from_image
+                    else:
+                        return new_roi_from_image
 
     def classify_images(self):
         graph1 = tf.Graph()
@@ -73,4 +73,3 @@ class EvaluateImages:
             self.evaluate_pix2pix(classImg)
             self.file_operations.save_final_image()
             return classImg
-
