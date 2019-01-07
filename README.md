@@ -19,8 +19,8 @@ This project focuses on finding pareidolias in clouds, and the process to do tha
 ...Defining the areas that we would be interested in analysing and extract them from the picture to continue the process
 ...![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/results/img_0.jpg)
 3. Generate outlines
-...![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
-...![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
+![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
+![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
 #### Classify image
 Here we send the outlines of our cloud to the classifier algorithm. In this example, it thinks it resembles a pokemon!
 #### Generate pix2pix
