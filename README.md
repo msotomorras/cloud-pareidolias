@@ -14,7 +14,9 @@ This project focuses on finding pareidolias in clouds, following this process:
 #### 2.1. Find Region of Interest (ROI)
    * Generate mask
    ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
+   
    * Find interesting areas in the picture and extract them
+   ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/results/img_0.jpg)
    * Generate outlines
 #### 2.2. Classify image**
 #### 2.3. Generate drawing upon found class**
@@ -33,7 +35,7 @@ This project focuses on finding pareidolias in clouds, following this process:
 
    * Find areas within a defined threshold and extract that part of the image<br/>
     Defining the areas that we would be interested in analysing and extract them from the picture to continue the process<br/>
-    ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/results/img_0.jpg)
+    
 
    * Generate outlines of the ROI <br/>
 
