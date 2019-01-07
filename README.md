@@ -10,11 +10,14 @@ This project focuses on finding pareidolias in clouds, and the process to do tha
 ## Process picture:
 **1. Find Region Of Interest (ROI)**
 * Generate mask of the image
+
 In this step we do image thresholding, in order to find big areas of white pixels in the sky. The brightest areas in the picture would become white pixels, and the rest of the areas would be black. 
 ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
+
 * Find areas within a defined threshold and extract that part of the image<br/>
 Defining the areas that we would be interested in analysing and extract them from the picture to continue the process<br/>
 ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/results/img_0.jpg)
+
 * Generate outlines of the ROI<br/>
 ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
 ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
