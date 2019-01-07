@@ -64,7 +64,6 @@ class EvaluateImages:
             pix2pix.evaluatePix2pix(self.file_manager.model_pokemons, 1.25/1)
 
     def main(self):
-        classImg = -1
         there_is_new_roi = self.get_new_region_of_interest_from_image()
         if there_is_new_roi:
             self.image_processing.generate_outlined_images(1)
@@ -73,5 +72,5 @@ class EvaluateImages:
             self.correct_outlines(classImg)
             self.evaluate_pix2pix(classImg)
             self.file_operations.save_final_image()
-        return classImg
+            return classImg
 

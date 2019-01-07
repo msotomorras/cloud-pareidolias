@@ -1,3 +1,5 @@
+# All commented lines must be uncommented for the code to run in the pi
+
 # from picamera import PiCamera
 import subprocess
 # from twython import Twython
@@ -44,6 +46,7 @@ def main():
     take_picture()
     time.sleep(5)
     classImg = evaluate_images.main()
-    tweet_image(classImg)
+    if classImg:
+        tweet_image(classImg)
 
 main()
