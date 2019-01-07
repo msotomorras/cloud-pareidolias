@@ -10,9 +10,9 @@ This project focuses on finding pareidolias in clouds, following this process:
    ![ img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg )
        
 ### 2. Process the picture
-   * **2.1. Find Region of Interest (ROI)**
-   * **2.2. Classify image**
-   * **2.3. Generate drawing upon found class**
+   **2.1. Find Region of Interest (ROI)**
+   **2.2. Classify image**
+   **2.3. Generate drawing upon found class**
 
 ### 3. Make a tweet if there was a shape found
 
