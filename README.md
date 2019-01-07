@@ -11,11 +11,11 @@ This project focuses on finding pareidolias in clouds, and the process to do tha
 
 
 ## Process picture:
-### Find Region Of Interest (ROI)
-### Classify image
-### Correct outlines according to class found
-### Generate pix2pix
-### Create final image
+#### Find Region Of Interest (ROI)
+#### Classify image
+#### Correct outlines according to class found
+#### Generate pix2pix
+#### Create final image
    
 ## Tweet picture
     
