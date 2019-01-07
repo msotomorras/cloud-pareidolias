@@ -7,13 +7,15 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 This project focuses on finding pareidolias in clouds, following this process:
 ### 1. Take a picture of the sky
 
+   ![ img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
+       
 ### 2. Process the picture
 
 ### 3. Make a tweet if there was a shape found
 
 -----
 ## 1. Take a picture of the sky
-![ img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
+
 ## 2. Process picture:
 **2.1. Find Region Of Interest (ROI)**
     * Generate mask of the image
