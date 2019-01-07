@@ -17,6 +17,7 @@ class ImageProcessing:
     def generate_region_of_interest (self, img, imgSrc):
         are_there_images_to_evaluate = False
         img = self.image_operations.resize_image(img)
+        self.file_operations.save_image(img, imgSrc.replace('.', '_original.'), self.file_manager.dir_debug) 
         mask = self.image_operations.create_mask(img)
         contours = self.image_operations.get_contours(mask)
 

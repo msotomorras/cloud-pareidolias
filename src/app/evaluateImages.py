@@ -43,7 +43,6 @@ class EvaluateImages:
                         if self.utility.is_image_valid(filename):
                             img = cv2.imread(os.path.join(self.file_manager.dir_classify, 'outlines', filename), 0)
                             img = cv2.resize(img, (64,64))
-                            self.file_operations.save_image(img, filename.replace('.', '_original.'), self.file_manager.dir_debug) 
                             data = img.reshape(1,64,64,1)
                             model_out = classifier.predict(data)
                             return np.argmax(model_out)
