@@ -8,7 +8,7 @@ This project focuses on finding pareidolias in clouds, and the process it follow
 
 1. Take a picture
 
-2. Evaluate if there is an interesting shape of a cloud in a picture and segment it
+2. Evaluate if there is an interesting shape of a cloud in a picture and segment it:
     * Threshold image 
     * Get mask of the image
     * Get masked image
