@@ -5,11 +5,11 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 ![pareidolia](https://www.artnews.com/wp-content/uploads/2017/08/4689253598_ccaa7fe938_b.jpg)
 
 This project focuses on finding pareidolias in clouds, following this process:
-## 1. Take a picture of the sky
+### 1. Take a picture of the sky
 
-## 2. Process the picture
+### 2. Process the picture
 
-## 3. Make a tweet if there was a shape found
+### 3. Make a tweet if there was a shape found
 
 -----
 ## 1. Take a picture of the sky
