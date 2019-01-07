@@ -22,13 +22,13 @@ Defining the areas that we would be interested in analysing and extract them fro
 ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
 ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
 
-2. **Classify image**
+**2. Classify image**
 Here we send the outlines of our cloud to the classifier algorithm. In this example, it thinks it resembles a pokemon!
 
-3. **Generate pix2pix<br/>**
+**3. Generate pix2pix<br/>**
 ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
 
-4. **Create final image**
+**4. Create final image**
 And here is the result!<br/>
 ![final image](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/final_img_0.jpg)
 
