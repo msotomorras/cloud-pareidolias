@@ -17,11 +17,13 @@ The pipeline for the project looks as follows:
 
 ## Dependencies
 
-This project runs using the following:
+I'm running the code in a virtual environment in mac, that contains the following:
+
 * **Python 3.5.6**, modern version of **numpy**, **argparse** and other modules that can be installed via `pip` and will be included in `requirements.text`
-* **OpenCV 3.4.4**
-* **tensorflow 1.12.0** 
-* **keras 2.2.4** with tensorflow backend
+* **OpenCV 3.4.4**. [In order to install it in the mac, I followed this website] (https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
+* **tensorflow 1.12.0** , It can be installed via `pip`. [You can follow these instructions] (https://www.tensorflow.org/install/pip)
+* **keras 2.2.4** with tensorflow backend, can also be installed via `pip`
+
 
 ## 1. Take a picture of the sky
 
