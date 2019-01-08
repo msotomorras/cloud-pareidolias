@@ -32,7 +32,8 @@ class ImageOperations:
         return imgMasked
 
     def get_contours(self, img):
-        im2, contours, hierarchy = cv2.findContours(img,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
+        mask = self.create_mask(img)
+        im2, contours, hierarchy = cv2.findContours(mask,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         return contours
 
     def get_edges (self, img, th1, th2):

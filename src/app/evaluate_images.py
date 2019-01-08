@@ -63,9 +63,8 @@ class EvaluateImages:
         else:
             pix2pix.evaluatePix2pix(self.file_setup.model_pokemons, 1.25/1)
 
-    def save_final_image(self):
-        merged_img = self.image_processing.generate_final_image()
-        self.cv_operations.save_image(merged_img, 'final_' + 'img_final.jpg', self.file_setup.dir_final)
+    def generate_final_image(self):
+        merged_img = self.image_processing.create_final_image()
 
     def main(self):
         there_is_new_roi = self.get_new_region_of_interest_from_image()
@@ -75,5 +74,5 @@ class EvaluateImages:
             print('detected class: ', classImg)
             self.correct_outlines(classImg)
             self.evaluate_pix2pix(classImg)
-            self.save_final_image()
+            self.generate_final_image()
             return classImg

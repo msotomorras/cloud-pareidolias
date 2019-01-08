@@ -1,13 +1,18 @@
 import cv2
 import os
+from image_operations import ImageOperations
 
 class CvOperations:
 
+    def __init__(self):
+        self.image_operations = ImageOperations()
+
     def read_image(self, filename, folder, type='BGR'):
         if(type == 'BGR'):
-            return cv2.imread(os.path.join(folder, filename), 1)
+            img = cv2.imread(os.path.join(folder, filename), 1)
         else:
-            return cv2.imread(os.path.join(folder, filename), 0)
+            img =  cv2.imread(os.path.join(folder, filename), 0)
+        return self.image_operations.resize_image(img)
 
     def to_gray_scale(self, img):
         return cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -30,3 +35,7 @@ class CvOperations:
         if (len(img.shape)==2):
             img = self.to_BGR(img)
         return cv2.bitwise_not(img)
+
+    def save_images(self, img1, name1, folder1, img2, name2, folder2):
+        self.save_image(img1, name1, folder1)
+        self.save_image(img2, name2, folder2)
