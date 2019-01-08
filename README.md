@@ -75,7 +75,7 @@ The models for running the pix2pix are not included in the repo due to their siz
    
    * Classify image
    
-      In this case it sees a pokemon!
+      In this case it sees a **pokemon**!
 
 **3. Generates drawing according to the detected class**
 
