@@ -11,7 +11,7 @@ This project focuses on finding pareidolias in clouds, following this process:
        
 ## 2. Process the picture
 
-1. Find Region of Interest (ROI)
+1. Get Region of Interest (ROI)
 
    * Generate mask
    
@@ -21,11 +21,15 @@ This project focuses on finding pareidolias in clouds, following this process:
    
       ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
    
+2. Classify the image - what shape does it resemble to?
+
    * Generate outlines
     
       ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
    
-2. Classify image
+   * Classify image
+   
+      In this case it sees a pokemon!
 
 3. Generate drawing upon found class
 
