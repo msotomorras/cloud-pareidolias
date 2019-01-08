@@ -28,7 +28,12 @@ This project focuses on finding pareidolias in clouds, following this process:
 2. Classify image
 
 3. Generate drawing upon found class
-   * ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
+
+   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
+   
+4. Merge results and generate new image
+   
+   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
 
 
 ## 3. Make a tweet if there was a shape found
@@ -58,7 +63,7 @@ This project focuses on finding pareidolias in clouds, following this process:
 
 **2.3. Generate pix2pix<br/>**
 
-   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
+   
 
 **2.4. Create final image**
     And here is the result!<br/>
