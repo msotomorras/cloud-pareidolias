@@ -7,8 +7,7 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 This project focuses on finding pareidolias in clouds, following this process:
 ## 1. Take a picture of the sky
 
-  The raspberry Pi will take a picture of the sky every 5-10 minutes
-      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
+   ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
        
 ## 2. Process the picture
 
@@ -20,9 +19,14 @@ This project focuses on finding pareidolias in clouds, following this process:
    
    * Find interesting areas in the picture and extract them
    
+      ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
+   
    * Generate outlines
-2. Classify image**
-3. Generate drawing upon found class**
+    
+      ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
+   
+2. Classify image
+3. Generate drawing upon found class
 
 ## 3. Make a tweet if there was a shape found
 
@@ -42,8 +46,8 @@ This project focuses on finding pareidolias in clouds, following this process:
 
    * Generate outlines of the ROI <br/>
 
-   ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
-   ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
+
+   
 
 **2.2. Classify image**
 
