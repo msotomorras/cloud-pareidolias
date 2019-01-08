@@ -2,15 +2,16 @@
 
 Pareidolia is a psychological phenomenon in which the mind responds to a stimulus, usually an image or a sound, by perceiving a familiar pattern where none exists. Like seeing a face in this picture:
 
-![pareidolia](https://www.artnews.com/wp-content/uploads/2017/08/4689253598_ccaa7fe938_b.jpg)
+  ![pareidolia](https://www.artnews.com/wp-content/uploads/2017/08/4689253598_ccaa7fe938_b.jpg)
 
 # Project
 
 This project uses `OpenCV` , `tensorflow` and `keras` to find pareidolias in clouds, create an image of the imagined shape, and letting us know via twitter.
 
-**For now**, the code is trained to recognize **three** classes: cats, flowers and pokemons. Here is how these clouds would look like as flowers and as cats:
-![flowers](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_12.jpg)
-![cats](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_12.jpg)
+**For now**, the code is trained to recognize **three** classes: **cats, flowers and pokemons**. Here is how these clouds would look like as flowers and as cats:
+
+  ![flowers](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_12.jpg)
+  ![cats](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_12.jpg)
 
 ## Overview
 
