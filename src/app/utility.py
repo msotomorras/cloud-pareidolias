@@ -1,13 +1,14 @@
 import os
 
-from fileManager import FileManager
+from file_setup import FileSetup
 
 class Utility:
 
-    file_manager = FileManager()
+    def __init__(self):
+        self.file_setup = FileSetup()
 
     def is_image_valid(self, sourceString):
-        return (os.path.exists(os.path.join(self.file_manager.dir_in, sourceString)) and (sourceString!='.DS_Store') and (sourceString.split('.')[-1]=='jpg'))
+        return (os.path.exists(os.path.join(self.file_setup.dir_in, sourceString)) and (sourceString!='.DS_Store') and (sourceString.split('.')[-1]=='jpg'))
 
     def correct_coords_if_negative(self, box):
         new_box = []

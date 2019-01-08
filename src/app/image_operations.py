@@ -51,7 +51,7 @@ class ImageOperations:
         margin = 20
         box = [0]
         area = self.get_total_area_img(img)
-        area_threshold = [5000, 15000] # [area*0.05, area*0.3]
+        area_threshold = [area*0.05, area*0.3]
 
         if area_threshold[0]<cv2.contourArea(cnt)<area_threshold[1]:
             (x,y,w,h) = cv2.boundingRect(cnt)
