@@ -22,8 +22,8 @@ The pipeline for the project looks as follows:
       * Looks for areas within a defined threshold
       * Substracts the background in the original image to generate outlines
       * Generates the outlines of the image
-   * Classifies the outlines of the cloud
-   * Generates drawing according to the detected class
+   * Classifies the outlines of the cloud using `keras`
+   * Generates drawing according to the detected class using `tensorflow` and `pix2pix`
    * Generates a final image composed by the original picture of the sky and the imagined shape
 * **Share** the processed and generated picture in twitter
 
