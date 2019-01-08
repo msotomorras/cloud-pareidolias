@@ -11,7 +11,7 @@ This project uses `OpenCV` , `tensorflow` and `keras` to find pareidolias in clo
 ## Overview
 
 The pipeline for the project looks as follows:
-* Takew a picture of the sky as **input**
+* Takes a picture of the sky as **input**
 * **Process** the picture
    * Search for clouds in the image
       * Thresholds image to find white areas
