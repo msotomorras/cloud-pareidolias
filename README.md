@@ -1,6 +1,5 @@
 # cloud-pareidolias
 
-# Pareidolia - what?
 Pareidolia is a psychological phenomenon in which the mind responds to a stimulus, usually an image or a sound, by perceiving a familiar pattern where none exists. Like seeing a face in this picture:
 
 ![pareidolia](https://www.artnews.com/wp-content/uploads/2017/08/4689253598_ccaa7fe938_b.jpg)
@@ -13,8 +12,10 @@ This project focuses on finding pareidolias in clouds, following this process:
 ## 2. Process the picture
 
 1. Find Region of Interest (ROI)
+
    * Generate mask
-   ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
+   
+      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
    
    * Find interesting areas in the picture and extract them
    
