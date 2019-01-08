@@ -41,13 +41,13 @@ The models for running the pix2pix are not included in the repo due to their siz
 1. **Get the code**. `git clone` the repo and install dependecies
 2. **Get models for pix2pix**
 3. **Define your input images** by pasting them into the 01-InputImages folder
-4. **Run your code and check your results** by running `python main.py` in /src/app/
+4. **Run your code and check your results** by running `python main.py` in `/src/app/` directory
 5. **Define twitter auth keys** to tweet a new state and image if found
 
 ### Running the tests
 
 1. Install [pytest](https://docs.pytest.org/en/latest/getting-started.html)
-2. Go to /src/tests and run `pytest` command
+2. Go to `/src/tests` directory and run `pytest` command
 
 ## Pipeline details
 
