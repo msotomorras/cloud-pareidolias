@@ -47,8 +47,7 @@ class ImageProcessing:
                     img = self.cv_operations.read_image(filename, self.file_setup.dir_classify)
                     if img is not None:
                         thresLimits = [20,60]
-                        if classImg != 1:
-                            img = self.cv_operations.blur_image(img, 2)
+                        img = self.image_operations.blur_image_if_not_flowers(img, classImg)
                         mask = self.image_operations.create_mask(img)
                         img = self.image_operations.mask_image(img, mask)
                         outlinedImg = self.image_operations.get_edges(img, thresLimits[0],thresLimits[1])

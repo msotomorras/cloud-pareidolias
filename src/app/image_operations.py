@@ -42,7 +42,6 @@ class ImageOperations:
         img2 = img.copy()
         img2 = cv2.rectangle(img2, (box[0], box[1]), (box[2], box[3]), (255,0,0), 2)
         return img2
-
       
     def get_total_area_img(self, img):
         return img.shape[0]*img.shape[1]
@@ -51,7 +50,7 @@ class ImageOperations:
         margin = 20
         box = [0]
         area = self.get_total_area_img(img)
-        area_threshold = [area*0.05, area*0.3]
+        area_threshold = [area*0.05, area*0.1]
 
         if area_threshold[0]<cv2.contourArea(cnt)<area_threshold[1]:
             (x,y,w,h) = cv2.boundingRect(cnt)
@@ -66,3 +65,9 @@ class ImageOperations:
         resultImg = np.full((original_image.shape[0], generated_image.shape[1]+marginLeft*2, 3), 255, np.uint8)
         resultImg[marginTop:marginTop+generated_image.shape[0], marginLeft:marginLeft+generated_image.shape[1]] = generated_image
         return resultImg
+
+    def blur_image_if_not_flowers(self, img, classImg):
+        if classImg != 1:
+            img = cv2.medianBlur(img, 5)
+            img = cv2.medianBlur(img, 5)
+        return img
