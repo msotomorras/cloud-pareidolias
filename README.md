@@ -10,7 +10,7 @@ This project uses `OpenCV` , `tensorflow` and `keras` to find pareidolias in clo
 
 **For now**, the code is trained to recognize and imagine **three** different classes: **cats**, **flowers** and **pokemons**. Here is how these clouds would look like as flowers and as cats:
 
-  ![](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/merged.jpg)
+  ![](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img.jpg)
 
 ## Overview
 
