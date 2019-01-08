@@ -42,4 +42,4 @@ This project focuses on finding pareidolias in clouds, following this process:
    ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/final_img_0.jpg)
 
 
-## 3. Make a tweet if there was a shape found
+## 3. Tweet the image!
