@@ -6,7 +6,7 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 
 # Project
 
-This project uses computer vision, keras and tensorflow to find pareidolias in clouds, create an image of the imagined shape, and letting us know via twitter.
+This project uses `OpenCV` , `tensorflow` and `keras` to find pareidolias in clouds, create an image of the imagined shape, and letting us know via twitter.
 
 ## Overview
 
