@@ -29,12 +29,13 @@ The pipeline for the project looks as follows:
 
 ## Dependencies
 
-I'm running the code in a virtual environment in mac, that contains the following:
+I'm running the code in a virtual environment in mac and in the raspberry PI, that contains the following:
 
 * **Python 3.5.6**, modern version of **numpy**, **argparse** and other modules that can be installed via `pip` and will be included in `requirements.text`
-* **OpenCV 3.4.4**. In order to install it in the mac, I followed [this website](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
+* **OpenCV 3.4.4**. In order to install it in the mac, I followed [this website](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/).<br/>
+For installing it in the PI, I followed [this](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi) repo.
 * **tensorflow 1.12.0** , It can be installed via `pip`. You can follow [these instructions](https://www.tensorflow.org/install/pip)
-* **keras 2.2.4** with tensorflow backend, can also be installed via `pip`
+* **keras 2.2.4** with tensorflow backend, can be installed via `pip` for mac.
 * **Twython** to tweet new images when found
 
 ## Getting started
