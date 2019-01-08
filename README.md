@@ -33,7 +33,7 @@ This project focuses on finding pareidolias in clouds, following this process:
    
 4. Merge results and generate new image
    
-   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
+   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/img_0.png)
 
 
 ## 3. Make a tweet if there was a shape found
