@@ -14,6 +14,10 @@ The pipeline for the project looks as follows:
 * Takew a picture of the sky as **input**
 * **Process** the picture
    * Looks for a cloud in the image
+      * Thresholds image to find white areas
+      * Looks for areas within a defined threshold
+      * Substracts the background in the original image to generate outlies
+      * Generates the outlines of the image
    * Classifies the outlines of the cloud
    * Generates image of the class detected with the outlines of the cloud
    * Generates a final image composed by the original picture of the sky and the imagined shape
