@@ -8,6 +8,20 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 
 This project uses computer vision, keras and tensorflow to find pareidolias in clouds, create an image of the imagined shape, and letting us know via twitter.
 
+## Overview
+
+The pipeline for the project looks as follows:
+* Take a picture of the sky as **input**
+* **Process** the picture
+* **Share** the processed and generated picture in twitter
+
+## Dependencies
+
+This project runs using the following:
+* **Python 3.5.6**, modern version of **numpy**, **argparse** and other modules that can be installed via `pip` and will be included in `requirements.text`
+* **OpenCV 3.4.4**
+* **tensorflow 1.12.0** 
+* **keras 2.2.4** with tensorflow backend
 
 ## 1. Take a picture of the sky
 
