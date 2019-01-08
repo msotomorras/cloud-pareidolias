@@ -31,7 +31,23 @@ I'm running the code in a virtual environment in mac, that contains the followin
 * **OpenCV 3.4.4**. In order to install it in the mac, I followed [this website](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/)
 * **tensorflow 1.12.0** , It can be installed via `pip`. You can follow [these instructions](https://www.tensorflow.org/install/pip)
 * **keras 2.2.4** with tensorflow backend, can also be installed via `pip`
+* **Twython** to tweet new images when found
 
+## Getting started
+
+### Running the code
+
+The models for running the pix2pix are not included in the repo due to their size. I used [this colab](https://colab.research.google.com/github/tensorflow/tensorflow/blob/master/tensorflow/contrib/eager/python/examples/pix2pix/pix2pix_eager.ipynb) script in order to get my model trained. Some helpful datasets can be found [here](https://people.eecs.berkeley.edu/~tinghuiz/projects/pix2pix/datasets/)
+1. **Get the code**. `git clone` the repo and install dependecies
+2. **Get models for pix2pix**
+3. **Define your input images** by pasting them into the 01-InputImages folder
+4. **Run your code and check your results** by running `python main.py` in /src/app/
+5. **Define twitter auth keys** to tweet a new state and image if found
+
+### Running the tests
+
+1. Install [pytest](https://docs.pytest.org/en/latest/getting-started.html)
+2. Go to /src/tests and run `pytest` command
 
 ## Pipeline details
 
