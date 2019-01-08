@@ -11,8 +11,12 @@ This project uses computer vision, keras and tensorflow to find pareidolias in c
 ## Overview
 
 The pipeline for the project looks as follows:
-* Take a picture of the sky as **input**
+* Takew a picture of the sky as **input**
 * **Process** the picture
+   * Looks for a cloud in the image
+   * Classifies the outlines of the cloud
+   * Generates image of the class detected with the outlines of the cloud
+   * Generates a final image composed by the original picture of the sky and the imagined shape
 * **Share** the processed and generated picture in twitter
 
 ## Dependencies
