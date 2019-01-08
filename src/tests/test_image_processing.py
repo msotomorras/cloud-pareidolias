@@ -4,7 +4,7 @@ import numpy as np
 import cv2
 sys.path.append("../app")
 
-from imageProcessing import ImageProcessing
+from image_processing import ImageProcessing
 
 class TestImageProcessing:
 
