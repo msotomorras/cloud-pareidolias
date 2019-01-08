@@ -13,13 +13,13 @@ This project uses computer vision, keras and tensorflow to find pareidolias in c
 The pipeline for the project looks as follows:
 * Takew a picture of the sky as **input**
 * **Process** the picture
-   * Looks for a cloud in the image
+   * Search for clouds in the image
       * Thresholds image to find white areas
       * Looks for areas within a defined threshold
-      * Substracts the background in the original image to generate outlies
+      * Substracts the background in the original image to generate outlines
       * Generates the outlines of the image
    * Classifies the outlines of the cloud
-   * Generates image of the class detected with the outlines of the cloud
+   * Generates drawing according to the detected class
    * Generates a final image composed by the original picture of the sky and the imagined shape
 * **Share** the processed and generated picture in twitter
 
@@ -33,19 +33,21 @@ I'm running the code in a virtual environment in mac, that contains the followin
 * **keras 2.2.4** with tensorflow backend, can also be installed via `pip`
 
 
-## 1. Take a picture of the sky
+## Pipeline details
+
+### 1. Take a picture of the sky
 
    ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
        
-## 2. Process the picture
+### 2. Process the picture
 
-**1. Get Region of Interest (ROI)**
+**1. Search for clouds in the image - Get Region of Interest (ROI)**
 
-   * Generate mask
+   * Thresholds image to find white areas - Generate mask
    
       ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
    
-   * Find interesting areas in the picture and extract them
+   * Looks for areas within a defined threshold  - Find interesting areas in the picture and extract them
    
       ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
    
@@ -59,7 +61,7 @@ I'm running the code in a virtual environment in mac, that contains the followin
    
       In this case it sees a pokemon!
 
-**3. Generate drawing upon found class**
+**3. Generates drawing according to the detected class**
 
    ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
    
@@ -68,4 +70,4 @@ I'm running the code in a virtual environment in mac, that contains the followin
    ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/final_img_0.jpg)
 
 
-## 3. Tweet the image!
+### 3. Tweet the image!
