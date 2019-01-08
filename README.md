@@ -8,6 +8,10 @@ Pareidolia is a psychological phenomenon in which the mind responds to a stimulu
 
 This project uses `OpenCV` , `tensorflow` and `keras` to find pareidolias in clouds, create an image of the imagined shape, and letting us know via twitter.
 
+**For now**, the code is trained to recognize **three** classes: cats, flowers and pokemons. Here are some results:
+[flowers](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_12.jpg)
+[cats](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example%20pics/img_14.jpg)
+
 ## Overview
 
 The pipeline for the project looks as follows:
