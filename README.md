@@ -35,7 +35,7 @@ I'm running the code in a virtual environment in mac and in the raspberry PI, th
 * **OpenCV 3.4.4**. In order to install it in the mac, I followed [this website](https://www.pyimagesearch.com/2016/12/19/install-opencv-3-on-macos-with-homebrew-the-easy-way/).<br/>
 For installing it in the PI, I followed the instructions given in [this](https://github.com/EdjeElectronics/TensorFlow-Object-Detection-on-the-Raspberry-Pi) repo.
 * **tensorflow 1.12.0** , It can be installed via `pip`. You can follow [these instructions](https://www.tensorflow.org/install/pip)
-* **keras 2.2.4** with tensorflow backend, can be installed via `pip` for mac.
+* **keras 2.2.4** with tensorflow backend, can be installed via `pip`.
 * **Twython** to tweet new images when found
 
 ## Getting started
