@@ -93,4 +93,4 @@ The models for running the pix2pix are not included in the repo due to their siz
 
 ### 3. Tweet the image!
 
-   ![tweet](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/tweet.jpg)
+   ![tweet](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/tweet.jpg)
