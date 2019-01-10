@@ -58,7 +58,7 @@ The models for running the pix2pix are not included in the repo due to their siz
 
 ### 1. Take a picture of the sky
 
-   ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0.jpg)
+   ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_original.jpg)
        
 ### 2. Process the picture
 
@@ -66,17 +66,17 @@ The models for running the pix2pix are not included in the repo due to their siz
 
    * Thresholds image to find white areas - Generate mask
    
-      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
+      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_mask.jpg)
    
    * Looks for areas within a defined threshold  - Find interesting areas in the picture and extract them
    
-      ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/img_0.jpg)
+      ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_cropped.jpg)
    
 **2. Classify the image - what shape does it resemble to?**
 
    * Generate outlines
     
-      ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/02-Classify/outlines/img_0.jpg)
+      ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_outlines.jpg)
    
    * Classify image
    
@@ -84,11 +84,11 @@ The models for running the pix2pix are not included in the repo due to their siz
 
 **3. Generates drawing according to the detected class**
 
-   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/images/img_0.png)
+   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_resultpng.png)
    
 **4. Merge results and generate new image**
    
-   ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/final/final_img_0.jpg)
+   ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_final.png)
 
 
 ### 3. Tweet the image!
