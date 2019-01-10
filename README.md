@@ -66,17 +66,17 @@ The models for running the pix2pix are not included in the repo due to their siz
 
    * Thresholds image to find white areas - Generate mask
    
-      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_masked.jpg)
+      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/img_masked.jpg)
    
    * Looks for areas within a defined threshold  - Find interesting areas in the picture and extract them
    
-      ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_cropped.jpg)
+      ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/img_cropped.jpg)
    
 **2. Classify the image - what shape does it resemble to?**
 
    * Generate outlines
     
-      ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_outlines.jpg)
+      ![outlines](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/img_outlines.jpg)
    
    * Classify image
    
@@ -84,13 +84,13 @@ The models for running the pix2pix are not included in the repo due to their siz
 
 **3. Generates drawing according to the detected class**
 
-   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_resultpng.png)
+   ![pix2pix](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/img_resultpng.png)
    
 **4. Merge results and generate new image**
    
-   ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_final.png)
+   ![final](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/img_final.png)
 
 
 ### 3. Tweet the image!
 
-   ![tweet](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/tweet.jpg)
+   ![tweet](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/example/tweet.jpg)
