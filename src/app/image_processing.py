@@ -31,7 +31,7 @@ class ImageProcessing:
                 if self.utility.is_image_valid(filename):
                     img = self.cv_operations.read_image(filename, self.file_setup.dir_classify)
                     if img is not None:
-                        thresLimits = [20,60]
+                        thresLimits = [15,50]
                         background_substraction_img = self.substract_background_from_image(img, classImg)
                         outlinedImg = self.get_outlines(background_substraction_img, thresLimits)
                         self.generate_img_to_classify(outlinedImg, filename)
@@ -61,7 +61,7 @@ class ImageProcessing:
     def generate_final_image(self, original_image, generated_image):
         result_img = self.image_operations.fit_generated_image_to_original_image(original_image, generated_image)
         merged_img = np.concatenate((original_image, result_img), axis=1)
-        self.cv_operations.save_image(merged_img, 'final_' + 'img_final.jpg', self.file_setup.dir_final)
+        self.cv_operations.save_image(merged_img, 'img_final.png', self.file_setup.dir_final)
 
     def generate_cropped_img_from_roi(self, img, imgSrc, rectangle):
         cropped_img = self.image_operations.crop_image(img, rectangle)

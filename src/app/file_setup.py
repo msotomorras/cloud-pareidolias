@@ -18,7 +18,7 @@ class FileSetup:
 
         self.model_classification = '../../classification/model.h5'
 
-        self.model_cats = '../../models/cats2'
+        self.model_cats = '../../models/cats'
         self.model_flowers = '../../models/flowers'
         self.model_pokemons = '../../models/pokemons'
 

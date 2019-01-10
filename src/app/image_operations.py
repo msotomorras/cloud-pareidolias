@@ -1,4 +1,5 @@
 import numpy as np
+import random
 import cv2
 import os
 
@@ -47,12 +48,16 @@ class ImageOperations:
     def get_total_area_img(self, img):
         return img.shape[0]*img.shape[1]
 
+    def get_area_thresholds(self, area):
+        low_threshold = random.randint(5, 6)*0.01
+        high_threshold = random.randint(2, 4)* 0.1
+        return [area*low_threshold, area*high_threshold]
+
     def get_bounding_box(self, cnt, img):
         margin = 20
         box = [0]
         area = self.get_total_area_img(img)
-        area_threshold = [5000, 15000] # [area*0.05, area*0.3]
-
+        area_threshold = self.get_area_thresholds(area)
         if area_threshold[0]<cv2.contourArea(cnt)<area_threshold[1]:
             (x,y,w,h) = cv2.boundingRect(cnt)
             aspect_ratio = 0.75

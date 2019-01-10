@@ -1,25 +1,32 @@
 from evaluate_images import EvaluateImages
+from slack_bot import SlackBot
 
-evaluate_images = EvaluateImages()
+class Main():
 
-def lookup_class(classImg):
-    class_name = []
-    if classImg == 0:
-        class_name = 'cats'
-    elif classImg == 1:
-        class_name = 'flowers'
-    else:
-        class_name ='a pokemon'
-    return class_name
+    def __init__(self):
+        self.evaluate_images = EvaluateImages()
+        self.slack_bot = SlackBot()
 
-def print_status(classImg):
-    print('tweet image')
-    statusStr = 'Check out this image! I think I can see ' + lookup_class(classImg)
-    print('status::::', statusStr)
+    def lookup_class(self, classImg):
+        class_name = []
+        if classImg == 0:
+            class_name = 'cats'
+        elif classImg == 1:
+            class_name = 'flowers'
+        else:
+            class_name ='a pokemon'
+        return class_name
 
-def main():
-    classImg = evaluate_images.main()
-    if classImg:
-        print_status(classImg)
+    def print_status(self, classImg):
+        print('tweet image')
+        statusStr = 'Check out this image! I think I can see ' + self.lookup_class(classImg)
+        print('status::::', statusStr)
 
-main()
+    def main(self):
+        classImg = self.evaluate_images.main()
+        if classImg != -1:
+            self.slack_bot.start_bot_and_post_img(self.lookup_class(classImg))
+            self.print_status(classImg)
+
+main = Main()
+main.main()
