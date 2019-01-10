@@ -66,7 +66,7 @@ The models for running the pix2pix are not included in the repo due to their siz
 
    * Thresholds image to find white areas - Generate mask
    
-      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/05-Debug/img_0_mask.jpg)
+      ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/example/img_mask.jpg)
    
    * Looks for areas within a defined threshold  - Find interesting areas in the picture and extract them
    
