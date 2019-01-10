@@ -58,7 +58,7 @@ The models for running the pix2pix are not included in the repo due to their siz
 
 ### 1. Take a picture of the sky
 
-   ![original_img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/04-Results/06-Example/img_original.jpg)
+   ![original_img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/06-Example/img_original.jpg)
        
 ### 2. Process the picture
 
