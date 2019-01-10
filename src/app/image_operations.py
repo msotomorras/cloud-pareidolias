@@ -9,10 +9,6 @@ class ImageOperations:
         print('box', box)
         return img[box[1]:box[3], box[0]:box[2]]  
 
-    def resize_image(self, img):
-        img = cv2.resize(img,(600, 450)) # (600, 450) as placeholder of image sizze from raspberry
-        return img
-
     def threshold_image(self, img):
         img = cv2.medianBlur(img,5)
         grayscaled = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
@@ -50,8 +46,8 @@ class ImageOperations:
 
     def get_area_thresholds(self, area):
         low_threshold = random.randint(5, 6)*0.01
-        high_threshold = random.randint(2, 4)* 0.1
-        return [area*low_threshold, area*high_threshold]
+        high_threshold = random.randint(1, 2)* 0.1
+        return [5000, 15000] #[area*low_threshold, area*high_threshold]
 
     def get_bounding_box(self, cnt, img):
         margin = 20
@@ -66,7 +62,9 @@ class ImageOperations:
         return box
 
     def fit_generated_image_to_original_image(self, original_image, generated_image):
+        print('height generated shape ', generated_image.shape)
         marginTop = int((original_image.shape[0]-generated_image.shape[0])*0.5)
+        print('margin toop', marginTop)
         marginLeft = 20
         resultImg = np.full((original_image.shape[0], generated_image.shape[1]+marginLeft*2, 3), 255, np.uint8)
         resultImg[marginTop:marginTop+generated_image.shape[0], marginLeft:marginLeft+generated_image.shape[1]] = generated_image

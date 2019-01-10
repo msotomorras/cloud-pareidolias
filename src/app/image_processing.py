@@ -41,7 +41,6 @@ class ImageProcessing:
     def create_final_image(self):
         for root, dirs, files in os.walk(self.file_setup.dir_results):  
             for filename in files:
-                print ('final file:', filename)
                 original_image = self.cv_operations.read_image(filename, self.file_setup.dir_results)
                 generated_image = self.cv_operations.read_image(filename.replace('.jpg', '.png'), self.file_setup.dir_results_pix2pix)
                 if original_image is not None and generated_image is not None:

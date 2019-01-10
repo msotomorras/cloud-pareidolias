@@ -27,6 +27,7 @@ class EvaluateImages:
                     new_roi_from_image = False 
                     if self.utility.is_image_valid(filename):
                         img = self.cv_operations.read_image(filename, self.file_setup.dir_in)
+                        img = self.cv_operations.resize(img, 600, 450)
                         new_roi_from_image = self.image_processing.generate_region_of_interest(img, filename)
                         return new_roi_from_image
                     else:

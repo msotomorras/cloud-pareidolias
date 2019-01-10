@@ -21,6 +21,7 @@ class FileSetup:
         self.model_cats = '../../models/cats'
         self.model_flowers = '../../models/flowers'
         self.model_pokemons = '../../models/pokemons'
+        self.model_gorillas = '../../models/gorillas'
 
     def setup_file_structure(self):
         self.file_manager.create_dir_if_not_existing(self.dir_classify)

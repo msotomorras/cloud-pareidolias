@@ -12,7 +12,7 @@ class CvOperations:
             img = cv2.imread(os.path.join(folder, filename), 1)
         else:
             img =  cv2.imread(os.path.join(folder, filename), 0)
-        return self.image_operations.resize_image(img)
+        return img
 
     def to_gray_scale(self, img):
         return cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
