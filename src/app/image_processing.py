@@ -46,8 +46,8 @@ class ImageProcessing:
                 if original_image is not None and generated_image is not None:
                     self.generate_final_image(original_image, generated_image)
 
-    def substract_background_from_image(self, img, classImg):
-        img = self.image_operations.blur_image_if_not_flowers(img, classImg)
+    def substract_background_from_image(self, image, classImg):
+        img = self.image_operations.blur_image_if_not_flowers(image, classImg)
         mask = self.image_operations.create_mask(img)
         img = self.image_operations.mask_image(img, mask)
         return img
@@ -82,7 +82,8 @@ class ImageProcessing:
         doubleOutput = np.concatenate((img, img), axis=1)
         self.cv_operations.save_image(doubleOutput, filename, self.file_setup.dir_pix2pix)   
 
-    def generate_debug_images(self, img, mask, imgSrc):
+    def generate_debug_images(self, img, imgSrc):
+        mask = self.image_operations.create_mask(img)
         imgMask = self.image_operations.mask_image(img, mask)
         self.cv_operations.save_image(img, imgSrc.replace('.', '_original.'), self.file_setup.dir_debug) 
         self.cv_operations.save_image(mask, imgSrc.replace('.', '_mask.'), self.file_setup.dir_debug)  
