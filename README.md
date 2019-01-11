@@ -68,7 +68,7 @@ The models for running the pix2pix are not included in the repo due to their siz
    
       ![mask img](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/06-Example/img_masked.jpg)
    
-   * Looks for areas within a defined threshold  - Find interesting areas in the picture and extract them
+   * Looks for white areas within a defined area threshold  - Find interesting areas in the picture and extract them
    
       ![bounding box](https://raw.githubusercontent.com/msotomorras/cloud-pareidolias/master/06-Example/img_cropped.jpg)
    
