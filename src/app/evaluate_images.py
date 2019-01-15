@@ -29,6 +29,8 @@ class EvaluateImages:
                         img = self.cv_operations.read_image(filename, self.file_setup.dir_in)
                         img = self.cv_operations.resize(img, 600, 450)
                         new_roi_from_image = self.image_processing.generate_region_of_interest(img, filename)
+                        if(new_roi_from_image != 1):
+                            print('ROI not found, finalizing process')
                         return new_roi_from_image
                     else:
                         return new_roi_from_image
@@ -68,10 +70,11 @@ class EvaluateImages:
         merged_img = self.image_processing.create_final_image()
 
     def main(self):
+        classImg = -1
         there_is_new_roi = self.get_new_region_of_interest_from_image()
         if there_is_new_roi:
             self.image_processing.generate_outlined_images(1)
-            classImg = self.classify_images()
+            classImg = 0# self.classify_images()
             print('detected class: ', classImg)
             self.correct_outlines(classImg)
             self.evaluate_pix2pix(classImg)

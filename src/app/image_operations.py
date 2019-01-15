@@ -5,6 +5,10 @@ import os
 
 class ImageOperations:
 
+    def __init__(self):
+        self.low_threshold = random.randint(2, 3)*0.01
+        self.high_threshold = random.randint(1, 1)* 0.1
+
     def crop_image(self, img, box):
         print('box', box)
         return img[box[1]:box[3], box[0]:box[2]]  
@@ -45,15 +49,15 @@ class ImageOperations:
         return img.shape[0]*img.shape[1]
 
     def get_area_thresholds(self, area):
-        low_threshold = random.randint(5, 6)*0.01
-        high_threshold = random.randint(1, 2)* 0.1
-        return [5000, 15000] #[area*low_threshold, area*high_threshold]
+        print('thresholds: ', [area*self.low_threshold, area*self.high_threshold])
+        return [area*self.low_threshold, area*self.high_threshold]
 
     def get_bounding_box(self, cnt, img):
         margin = 20
         box = [0]
         area = self.get_total_area_img(img)
         area_threshold = self.get_area_thresholds(area)
+        print(cv2.contourArea(cnt))
         if area_threshold[0]<cv2.contourArea(cnt)<area_threshold[1]:
             (x,y,w,h) = cv2.boundingRect(cnt)
             aspect_ratio = 0.75
@@ -62,9 +66,7 @@ class ImageOperations:
         return box
 
     def fit_generated_image_to_original_image(self, original_image, generated_image):
-        print('height generated shape ', generated_image.shape)
         marginTop = int((original_image.shape[0]-generated_image.shape[0])*0.5)
-        print('margin toop', marginTop)
         marginLeft = 20
         resultImg = np.full((original_image.shape[0], generated_image.shape[1]+marginLeft*2, 3), 255, np.uint8)
         resultImg[marginTop:marginTop+generated_image.shape[0], marginLeft:marginLeft+generated_image.shape[1]] = generated_image

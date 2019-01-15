@@ -18,6 +18,7 @@ class ImageProcessing:
         are_there_images_to_evaluate = False
         contours = self.image_operations.get_contours(img)
         print('img processed')
+        self.generate_debug_images(img, imgSrc)
         for cnt in contours:
             rectangle = self.image_operations.get_bounding_box(cnt, img)
             if rectangle is not None and self.utility.is_rectangle_valid(rectangle):
