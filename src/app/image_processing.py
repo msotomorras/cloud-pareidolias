@@ -39,13 +39,13 @@ class ImageProcessing:
                         self.generate_img_for_pix2pix(outlinedImg, filename)
                         print('Outline generated:', filename)
 
-    def create_final_image(self):
+    def create_final_image(self, img_name):
         for root, dirs, files in os.walk(self.file_setup.dir_results):  
             for filename in files:
                 original_image = self.cv_operations.read_image(filename, self.file_setup.dir_results)
                 generated_image = self.cv_operations.read_image(filename.replace('.jpg', '.png'), self.file_setup.dir_results_pix2pix)
                 if original_image is not None and generated_image is not None:
-                    self.generate_final_image(original_image, generated_image)
+                    self.generate_final_image(original_image, generated_image, img_name)
 
     def substract_background_from_image(self, image, classImg):
         img = self.image_operations.blur_image_if_not_flowers(image, classImg)
@@ -58,10 +58,10 @@ class ImageProcessing:
         outlinedImg = self.cv_operations.invert_image(outlinedImg)
         return outlinedImg
 
-    def generate_final_image(self, original_image, generated_image):
+    def generate_final_image(self, original_image, generated_image, img_name):
         result_img = self.image_operations.fit_generated_image_to_original_image(original_image, generated_image)
         merged_img = np.concatenate((original_image, result_img), axis=1)
-        self.cv_operations.save_image(merged_img, 'img_final.png', self.file_setup.dir_final)
+        self.cv_operations.save_image(merged_img, img_name+'.png', self.file_setup.dir_final)
 
     def generate_cropped_img_from_roi(self, img, imgSrc, rectangle):
         cropped_img = self.image_operations.crop_image(img, rectangle)

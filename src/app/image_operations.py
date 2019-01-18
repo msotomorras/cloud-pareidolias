@@ -7,7 +7,7 @@ class ImageOperations:
 
     def __init__(self):
         self.low_threshold = random.randint(2, 3)*0.01
-        self.high_threshold = random.randint(1, 1)* 0.1
+        self.high_threshold = random.randint(1, 3)* 0.1
 
     def crop_image(self, img, box):
         print('box', box)

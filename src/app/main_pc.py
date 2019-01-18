@@ -23,10 +23,10 @@ class Main():
         print('status::::', statusStr)
 
     def main(self):
-        classImg = self.evaluate_images.main()
-        #if classImg != -1:
-            # self.slack_bot.start_bot_and_post_img(self.lookup_class(classImg))
-            # self.print_status(classImg)
+        classImg, img_id = self.evaluate_images.main()
+        if classImg != -1:
+            self.slack_bot.start_bot_and_post_img(self.lookup_class(classImg), img_id)
+            self.print_status(classImg)
 
 main = Main()
 main.main()

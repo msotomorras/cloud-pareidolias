@@ -19,6 +19,7 @@ class EvaluateImages:
         self.image_processing = ImageProcessing()
 
         self.file_setup.setup_file_structure()
+        self.date_id = self.utility.get_date_id()
 
     def get_new_region_of_interest_from_image(self):
         for root, dirs, files in os.walk(self.file_setup.dir_in): 
@@ -66,17 +67,17 @@ class EvaluateImages:
         else:
             pix2pix.evaluatePix2pix(self.file_setup.model_pokemons, 1.25/1)
 
-    def generate_final_image(self):
-        merged_img = self.image_processing.create_final_image()
+    def generate_final_image(self, img_name):
+        merged_img = self.image_processing.create_final_image(img_name)
 
     def main(self):
         classImg = -1
         there_is_new_roi = self.get_new_region_of_interest_from_image()
         if there_is_new_roi:
             self.image_processing.generate_outlined_images(1)
-            classImg = 0# self.classify_images()
+            classImg = self.classify_images()
             print('detected class: ', classImg)
             self.correct_outlines(classImg)
             self.evaluate_pix2pix(classImg)
-            self.generate_final_image()
-            return classImg
+            self.generate_final_image(self.date_id)
+            return classImg, self.date_id

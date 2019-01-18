@@ -1,4 +1,5 @@
 import os
+import datetime
 
 from file_setup import FileSetup
 
@@ -21,3 +22,14 @@ class Utility:
 
     def ignore_ds_store(self, filename):
         return (filename != '.DS_Store')
+
+    def get_date_id(self):
+        now = datetime.datetime.now()
+        hour = now.hour
+        minute = now.minute
+        day = now.day
+        month = now.month
+
+        composed_date_id = str(day)+str(month)+str(hour)+str(minute)
+
+        return composed_date_id
