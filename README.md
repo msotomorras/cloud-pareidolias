@@ -1,12 +1,12 @@
 # cloud-pareidolias
 
+**Live results can be seen in https://msotomorras.github.io/**
+
 **Pareidolia** is a psychological phenomenon in which the mind responds to a stimulus, usually an image or a sound, by perceiving a familiar pattern where none exists. Like seeing a face in this picture:
 
   ![pareidolia](https://www.artnews.com/wp-content/uploads/2017/08/4689253598_ccaa7fe938_b.jpg)
 
 # Project
-
-Live results can be seen in https://msotomorras.github.io/
 
 This project uses `OpenCV` , `tensorflow` and `keras` to find shapes in clouds, create an image of the imagined shape, and letting us know. For that, I trained four models: one for the classification, and three for the possible 3 classes. The used databases can be found in this repo.
 
