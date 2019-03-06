@@ -6,6 +6,8 @@
 
 # Project
 
+Live results can be seen in https://msotomorras.github.io/
+
 This project uses `OpenCV` , `tensorflow` and `keras` to find shapes in clouds, create an image of the imagined shape, and letting us know. For that, I trained four models: one for the classification, and three for the possible 3 classes. The used databases can be found in this repo.
 
 **For now**, the code is trained to recognize and imagine **three** different classes: **cats**, **flowers** and **pokemon**. Here is how it imagines flowers and cats in those clouds:
