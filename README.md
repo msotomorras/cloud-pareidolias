@@ -1,4 +1,4 @@
-**Live results can be seen in https://maotomorras.github.io** WIP! you might find some weird result
+**Live results can be seen in https://msotomorras.github.io** WIP! you might find some weird resuls
 
 # cloud-pareidolias
 
