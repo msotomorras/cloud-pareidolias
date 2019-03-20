@@ -1,5 +1,3 @@
-**Live results can be seen in https://msotomorras.github.io/**
-
 # cloud-pareidolias
 
 **Pareidolia** is a psychological phenomenon in which the mind responds to a stimulus, usually an image or a sound, by perceiving a familiar pattern where none exists. Like seeing a face in this picture:
