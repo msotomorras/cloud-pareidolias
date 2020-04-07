@@ -1,6 +1,6 @@
 # cloud-pareidolias
 
-Description of the project can be found in [this link](https://www.ideo.com/blog/training-a-computer-to-find-shapes-in-the-clouds)
+Ideo blog post about this project can be found [here](https://www.ideo.com/blog/training-a-computer-to-find-shapes-in-the-clouds)
 
 **Pareidolia** is a psychological phenomenon in which the mind responds to a stimulus, usually an image or a sound, by perceiving a familiar pattern where none exists. Like seeing a face in this picture:
 
